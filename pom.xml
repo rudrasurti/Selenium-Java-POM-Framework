@@ -130,6 +130,13 @@
         </dependency>
 
 
+        <!-- Newer Lombok so the project also compiles on Java 17+ (older one came in transitively) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>
