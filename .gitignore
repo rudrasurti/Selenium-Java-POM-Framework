@@ -1,0 +1,8 @@
+target/
+test-output/
+ExtentReports/
+*.zip
+.DS_Store
+.classpath
+.project
+.settings/

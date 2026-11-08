@@ -1,4 +1,29 @@
-# Selenium Framework
+# Selenium + Java POM Framework
+
+![Build](https://github.com/rudrasurti/Selenium-Java-POM-Framework/actions/workflows/build.yml/badge.svg)
+![Java](https://img.shields.io/badge/Java-11%20%7C%2017-007396)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A)
+![TestNG](https://img.shields.io/badge/TestNG-7-FF7F00)
+
+A web UI automation framework in Java with Selenium WebDriver, TestNG and the Page Object Model. It runs locally or on a remote Selenium Grid (Docker), produces ExtentReports with screenshots, and is built to run from Jenkins.
+
+## Framework design at a glance
+
+| Layer | What it does |
+|---|---|
+| `driver/` | `DriverFactory` with local and remote (Grid) drivers, thread-safe `DriverManager` for parallel runs |
+| `config/` | Owner-based typed config: browser, run mode, URLs, waits |
+| `pages/` | Page Objects: selectors and actions in one place |
+| `reports/` | ExtentReports V5 with author, browser and category filters, Base64 screenshots |
+| `annotations/`, `enums/` | Custom `@FrameworkAnnotation` to tag tests by author and category |
+| Test data | Excel (Apache POI) and data suppliers for data-driven tests |
+| CI | GitHub Actions compiles the framework and tests on Java 11 and 17 on every push |
+
+See also my newer [Playwright + TypeScript framework](https://github.com/rudrasurti/Playwright-TypeScript-UI-API-Framework) with a live test report.
+
+---
+
+## Original notes
 
 TMB Selenium Framework 2 is a project designed and developed using Selenium with Java, Docker, Git, and Jenkins. It aims to provide a robust framework for web automation testing. Here are some key features and components of the framework:
 
@@ -39,3 +64,7 @@ To run the project on your local machine, follow these steps:
 Please note that the `config.properties` file contains the necessary configuration settings for the project.
 
 This framework aims to provide a comprehensive and customizable solution for web automation testing using Selenium with Java, Docker, Git, and Jenkins.
+
+---
+
+**Rudra Surti** · Senior SDET · [Website](https://rudrasurti.github.io) · [LinkedIn](https://www.linkedin.com/in/rudra-surti/)
